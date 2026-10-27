@@ -1,0 +1,9 @@
+:root {
+  --synt-radius-control: 6px;
+  --synt-radius-row: 8px;
+  --synt-radius-field: 10px;
+
+  --synt-z-raised: 10;
+  --synt-z-menu: 20;
+  --synt-z-toast: 30;
+}

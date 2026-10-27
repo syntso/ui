@@ -1,0 +1,85 @@
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin: 0 -10px;
+  padding: 8px 10px;
+  border-radius: var(--synt-radius-row);
+}
+
+.row:hover {
+  background: var(--synt-hover);
+}
+
+.row[data-selected] {
+  background: var(--synt-select);
+}
+
+.lead {
+  display: grid;
+  place-items: center;
+  color: var(--synt-muted);
+}
+
+.lead svg {
+  width: 16px;
+  height: 16px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.title,
+.open {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.open {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.open::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.open:focus-visible {
+  outline: 0;
+}
+
+.open:focus-visible::after {
+  outline: 2px solid var(--synt-muted);
+  outline-offset: -2px;
+}
+
+.detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--synt-small);
+  color: var(--synt-muted);
+}
+
+.trailing {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: var(--synt-small);
+  color: var(--synt-faint);
+}

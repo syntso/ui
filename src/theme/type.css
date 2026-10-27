@@ -1,0 +1,11 @@
+:root {
+  --synt-sans: "Geist Variable", system-ui, sans-serif;
+  --synt-mono: "Geist Mono Variable", ui-monospace, monospace;
+  --synt-title: 600 20px/28px var(--synt-sans);
+  --synt-field-type: 400 16px/24px var(--synt-sans);
+  --synt-body: 400 13px/19px var(--synt-sans);
+  --synt-body-strong: 500 13px/19px var(--synt-sans);
+  --synt-small: 400 12px/17px var(--synt-sans);
+  --synt-code: 400 12.5px/20px var(--synt-mono);
+  --synt-code-small: 400 11px/16px var(--synt-mono);
+}

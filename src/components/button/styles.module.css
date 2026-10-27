@@ -1,0 +1,36 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--synt-radius-control);
+  font: var(--synt-body-strong);
+  white-space: nowrap;
+  color: var(--synt-text);
+  background: var(--synt-hover);
+  transition: background-color var(--synt-fast) var(--synt-ease), scale var(--synt-fast) var(--synt-ease);
+}
+
+.button:hover {
+  background: var(--synt-select);
+}
+
+.button:active {
+  scale: 0.98;
+}
+
+.button[data-variant="primary"] {
+  background: var(--synt-primary);
+  color: var(--synt-on-primary);
+}
+
+.button[data-variant="primary"]:hover {
+  background: color-mix(in srgb, var(--synt-primary) 88%, var(--synt-bg));
+}
+
+.shortcut {
+  font: var(--synt-code-small);
+  opacity: 0.7;
+}

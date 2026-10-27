@@ -1,0 +1,5 @@
+.pulse {
+  display: block;
+  flex: none;
+  color: var(--synt-pix);
+}

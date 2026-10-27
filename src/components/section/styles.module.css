@@ -1,0 +1,22 @@
+.section {
+  margin-top: 44px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 8px;
+  font: var(--synt-body-strong);
+  color: var(--synt-muted);
+}
+
+.count {
+  font: var(--synt-code-small);
+  color: var(--synt-faint);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+}

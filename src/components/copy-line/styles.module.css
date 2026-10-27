@@ -1,0 +1,24 @@
+.line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  padding: 0 6px 0 14px;
+  border-radius: var(--synt-radius-row);
+  background: var(--synt-field);
+  box-shadow: inset 0 0 0 1px var(--synt-line);
+}
+
+.prompt {
+  font: var(--synt-code);
+  color: var(--synt-faint);
+}
+
+.command {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--synt-code);
+}

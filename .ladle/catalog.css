@@ -1,0 +1,13 @@
+.ladle-main {
+  background: var(--synt-bg);
+  color: var(--synt-text);
+}
+
+.catalog {
+  font: var(--synt-body);
+  min-height: 100%;
+}
+
+.ladle-background {
+  background: var(--synt-bg);
+}

@@ -1,0 +1,19 @@
+.project {
+  display: block;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  color: var(--synt-faint);
+  transition: rotate var(--synt-disclose) var(--synt-ease);
+}
+
+.project[data-state="open"] .chevron {
+  rotate: 90deg;
+}
+
+.content {
+  padding-bottom: 4px;
+}
