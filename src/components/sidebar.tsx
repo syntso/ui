@@ -5,7 +5,7 @@ import { useKeyDown } from "../hooks/key-down";
 export interface SidebarProperties {
   label: string;
   top: ReactNode;
-  footer: ReactNode;
+  footer?: ReactNode;
   children: ReactNode;
 }
 
@@ -46,7 +46,7 @@ export function Sidebar({ label, top, footer, children }: SidebarProperties) {
       <nav ref={nav} aria-label={label} className="flex-1 overflow-auto px-2 pt-1">
         {children}
       </nav>
-      <div className="border-t border-line p-2">{footer}</div>
+      {footer && <div className="border-t border-line p-2">{footer}</div>}
     </aside>
   );
 }

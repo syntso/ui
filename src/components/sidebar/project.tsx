@@ -16,7 +16,7 @@ export interface SidebarProjectProperties {
   busy?: boolean;
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  add: MenuEntry[];
+  add?: MenuEntry[];
   entries: MenuEntry[];
   children: ReactNode;
 }
@@ -42,7 +42,7 @@ export function SidebarProject({ name, total, live, unreachable = false, busy = 
               </span>
             </span>
           </Collapsible.Trigger>
-          <SidebarActions add={add} more={entries} />
+          <SidebarActions {...(add ? { add } : {})} more={entries} />
         </div>
       </MenuContext>
       <Collapsible.Content className="pb-1">{children}</Collapsible.Content>

@@ -9,7 +9,7 @@ export function SidebarActions({ add, more }: { add?: MenuEntry[]; more: MenuEnt
       data-actions
       className="absolute right-1 hidden gap-0.5 group-hover/row:flex group-focus-within/row:flex has-[[data-state=open]]:flex"
     >
-      {add && (
+      {add && add.length > 0 && (
         <MenuDropdown entries={add} align="end">
           <IconButton label="Add" size="small">
             <Plus />
