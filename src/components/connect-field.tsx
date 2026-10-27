@@ -4,6 +4,7 @@ import { useId, type ReactNode } from "react";
 import { Key } from "./key";
 
 export interface ConnectFieldProperties {
+  id?: string;
   value: string;
   onChange: (value: string) => void;
   onSubmit?: () => void;
@@ -12,7 +13,7 @@ export interface ConnectFieldProperties {
   hint?: ReactNode;
 }
 
-export function ConnectField({ value, onChange, onSubmit, placeholder = "Connect to a host, cluster or database", shortcut = "⌘K", hint }: ConnectFieldProperties) {
+export function ConnectField({ id, value, onChange, onSubmit, placeholder = "Connect to a host, cluster or database", shortcut = "⌘K", hint }: ConnectFieldProperties) {
   const hintId = useId();
 
   return (
@@ -20,6 +21,7 @@ export function ConnectField({ value, onChange, onSubmit, placeholder = "Connect
       <label className="flex h-13 items-center gap-3 rounded-field bg-field px-4 shadow-[inset_0_0_0_1px_var(--color-line)] transition-shadow duration-120 ease-out focus-within:shadow-[inset_0_0_0_1px_var(--color-faint)]">
         <SquareTerminal className="size-[17px] shrink-0 text-muted" aria-hidden />
         <input
+          id={id}
           className="min-w-0 flex-1 bg-transparent text-field text-ink outline-none placeholder:text-faint"
           value={value}
           placeholder={placeholder}
