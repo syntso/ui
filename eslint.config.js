@@ -31,11 +31,4 @@ export default tseslint.config(
       "@typescript-eslint/consistent-type-imports": "error",
     },
   },
-  {
-    files: ["src/components/sidebar/grip/root.tsx"],
-    rules: {
-      "jsx-a11y/no-noninteractive-element-interactions": "off",
-      "jsx-a11y/no-noninteractive-tabindex": ["error", { roles: ["separator"] }],
-    },
-  },
 );

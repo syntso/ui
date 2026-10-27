@@ -22,7 +22,6 @@
       "vitest/globals",
       "@testing-library/jest-dom/vitest"
     ],
-    "allowImportingTsExtensions": true,
     "noEmit": true
   },
   "include": [
@@ -30,7 +29,6 @@
     "tests",
     "stories",
     ".ladle",
-    "scripts",
     "*.ts"
   ]
 }

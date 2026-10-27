@@ -1,6 +1,6 @@
 export default {
   stories: "stories/**/*.stories.tsx",
-  defaultStory: "sidebar--workday",
+  defaultStory: "lists--home",
   addons: {
     theme: { enabled: true, defaultState: "dark" },
     width: { enabled: false },

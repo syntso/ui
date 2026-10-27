@@ -1,6 +1,0 @@
-:root {
-  --synt-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --synt-fast: 120ms;
-  --synt-disclose: 160ms;
-  --synt-enter: 220ms;
-}

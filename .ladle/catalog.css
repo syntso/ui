@@ -1,13 +1,4 @@
-.ladle-main {
-  background: var(--synt-bg);
-  color: var(--synt-text);
-}
+@import "tailwindcss";
+@import "../src/theme.css";
 
-.catalog {
-  font: var(--synt-body);
-  min-height: 100%;
-}
-
-.ladle-background {
-  background: var(--synt-bg);
-}
+@source "../stories";

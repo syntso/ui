@@ -24,16 +24,18 @@ describe("Pixels", () => {
 
   it("breathes all lit pixels together while waiting", () => {
     const pixels = new Pixels(grid, sequence(0.1, 0.9));
+
     const low = pixels.alphas("waiting", -660);
     const high = pixels.alphas("waiting", 660);
     const lit = low.map((alpha, i) => alpha !== 0.1 || high[i] !== 0.1);
 
     expect(lit.some(Boolean)).toBe(true);
-    expect(new Set(high.filter((_, i) => lit[i]))).toHaveProperty("size", 1);
+    expect(new Set(high.filter((_, i) => lit[i])).size).toBe(1);
   });
 
   it("flares and decays while working", () => {
     const pixels = new Pixels(grid, sequence(0.5));
+
     const first = pixels.alphas("working", 0);
     const second = pixels.alphas("working", 90);
 

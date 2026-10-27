@@ -1,4 +1,4 @@
-import type { Activity } from "../../models/agent";
+import type { Activity } from "../pulse";
 
 export interface Grid {
   columns: number;

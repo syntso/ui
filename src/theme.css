@@ -1,0 +1,93 @@
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+@source "./components";
+
+@theme {
+  --color-*: initial;
+  --color-canvas: light-dark(#fafaf9, #0a0a0a);
+  --color-panel: light-dark(#f2f2f0, #0e0e0e);
+  --color-raised: light-dark(#ffffff, #151515);
+  --color-field: light-dark(#ffffff, #121212);
+  --color-line: light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 7%));
+  --color-ink: light-dark(#111110, #f2f2f0);
+  --color-muted: light-dark(#6b6b66, #8c8c87);
+  --color-faint: light-dark(#a2a29c, #5a5a55);
+  --color-hover: light-dark(rgb(0 0 0 / 4%), rgb(255 255 255 / 4.5%));
+  --color-select: light-dark(rgb(0 0 0 / 6.5%), rgb(255 255 255 / 8%));
+  --color-agent: light-dark(#7a6f00, #ece55a);
+  --color-pixel: light-dark(#b3a600, #ece55a);
+  --color-ok: light-dark(#2f8f43, #7fd18b);
+  --color-danger: light-dark(#d23b2e, #ff6b5e);
+
+  --font-sans: "Geist Variable", system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, monospace;
+
+  --text-title: 20px;
+  --text-title--line-height: 28px;
+  --text-title--font-weight: 600;
+  --text-field: 16px;
+  --text-field--line-height: 24px;
+  --text-body: 13px;
+  --text-body--line-height: 19px;
+  --text-small: 12px;
+  --text-small--line-height: 17px;
+  --text-code: 12.5px;
+  --text-code--line-height: 20px;
+  --text-code-small: 11px;
+  --text-code-small--line-height: 16px;
+
+  --radius-control: 6px;
+  --radius-row: 8px;
+  --radius-field: 10px;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --shadow-menu: 0 0 0 1px var(--color-line), 0 12px 32px light-dark(rgb(0 0 0 / 12%), rgb(0 0 0 / 40%));
+
+  --animate-enter: enter 120ms var(--ease-out);
+
+  @keyframes enter {
+    from {
+      opacity: 0;
+      scale: 0.97;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  [data-theme="light"] {
+    color-scheme: light;
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-pixel) 35%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-muted);
+    outline-offset: 1px;
+  }
+
+  * {
+    scrollbar-color: var(--color-select) transparent;
+    scrollbar-width: thin;
+  }
+}

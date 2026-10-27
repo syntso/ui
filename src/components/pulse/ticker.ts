@@ -30,5 +30,3 @@ export class Ticker {
     this.frame = requestAnimationFrame(this.tick);
   };
 }
-
-export const pixelTicker = new Ticker(90);
