@@ -2,6 +2,8 @@ import * as ContextMenu from "@radix-ui/react-context-menu";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import type { ComponentType, ReactNode } from "react";
 
+import { cn } from "../lib/cn";
+
 export type MenuEntry =
   | { kind: "head"; title: string; detail?: string }
   | { kind: "item"; label: string; shortcut?: string; danger?: boolean; onSelect?: () => void }
@@ -32,7 +34,7 @@ function Entries({ entries, parts: { Item, Label, Separator } }: { entries: Menu
     return (
       <Item
         key={i}
-        className={`flex h-7 cursor-default items-center gap-4 rounded-[5px] px-2 outline-none select-none data-[highlighted]:bg-select ${entry.danger ? "text-danger" : ""}`}
+        className={cn("flex h-7 cursor-default items-center gap-4 rounded-[5px] px-2 outline-none select-none data-[highlighted]:bg-select", entry.danger && "text-danger")}
         {...(entry.onSelect ? { onSelect: entry.onSelect } : {})}
       >
         <span className="flex-1">{entry.label}</span>

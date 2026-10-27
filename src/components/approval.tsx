@@ -2,6 +2,7 @@ import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { useKeyDown } from "../hooks/key-down";
+import { cn } from "../lib/cn";
 
 import { Button } from "./button";
 import { IconButton } from "./icon-button";
@@ -74,7 +75,7 @@ export function Approval({ agent, command, target, reason, privileged, onAnswer 
       <span className="flex gap-2">
         <Button onClick={() => answer("deny")}>Deny</Button>
         <span className="flex gap-px">
-          <Button variant="primary" shortcut="↵" className={wider.length ? "rounded-r-none" : ""} onClick={() => answer("once")}>
+          <Button variant="primary" shortcut="↵" className={cn(wider.length > 0 && "rounded-r-none")} onClick={() => answer("once")}>
             {labels.once}
           </Button>
           {wider.length > 0 && (

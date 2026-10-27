@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { cn } from "../lib/cn";
+
 export function StatusBar({ start, end }: { start: ReactNode; end?: ReactNode }) {
   return (
     <footer className="flex h-7 items-center justify-between border-t border-line bg-panel px-3 text-[11.5px] text-muted">
@@ -11,7 +13,7 @@ export function StatusBar({ start, end }: { start: ReactNode; end?: ReactNode })
 
 export function StatusItem({ tone, children }: { tone?: "online" | "agent"; children: ReactNode }) {
   return (
-    <span className={`inline-flex items-center gap-1.5 ${tone === "agent" ? "text-agent" : ""}`}>
+    <span className={cn("inline-flex items-center gap-1.5", tone === "agent" && "text-agent")}>
       {tone === "online" && <span className="size-1.5 rounded-full bg-ok" aria-hidden />}
       {children}
     </span>

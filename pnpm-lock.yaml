@@ -181,9 +181,15 @@ importers:
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.2.1
         version: 2.2.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      clsx:
+        specifier: ~2.1.1
+        version: 2.1.1
       lucide-react:
         specifier: ~1.61.0
         version: 1.61.0(@types/react@19.3.0)(react@19.3.1)
+      tailwind-merge:
+        specifier: ~3.7.0
+        version: 3.7.0
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -3794,6 +3800,9 @@ packages:
   tagged-tag@1.0.0:
     resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
     engines: {node: '>=20'}
+
+  tailwind-merge@3.7.0:
+    resolution: {integrity: sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==}
 
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
@@ -8116,6 +8125,8 @@ snapshots:
       inline-style-parser: 0.2.7
 
   tagged-tag@1.0.0: {}
+
+  tailwind-merge@3.7.0: {}
 
   tailwindcss@4.3.3: {}
 
